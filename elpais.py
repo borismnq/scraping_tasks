@@ -63,7 +63,7 @@ class VideoArticles:
 
         return article_data
 
-    def get_video_urls(self):
+    def get_video_news(self):
         """Scrap video~articles urls from elpais (España) and return them"""
 
         elpais_href_list = []
@@ -83,14 +83,15 @@ if __name__=='__main__':
 
     v_a = VideoArticles()
 
-    video_urls = v_a.get_video_urls()
+    news_url = v_a.get_video_news()
     
     data_list=[]
-    if video_urls:
-        for link in video_urls:
+    if news_url:
+        for link in news_url:
             data = v_a.get_article_data(link)
             if data:
                 data_list.append(data)
+    print(data_list)
     print("DONE")
     #  PENDING
     # for data in data_list:

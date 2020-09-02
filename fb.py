@@ -13,8 +13,8 @@ import re
 
 
 ROOT_URL = 'https://facebook.com'
-EMAIL = "boris_wtf@hotmail.com"
-PASS= "Cabrones543"
+FB_EMAIL = "email aqui"
+FB_PASS= "password aqui"
 HEADERS = {
     "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 "+
     "(KHTML, like Gecko) Ubuntu Chromium/71.0.3578.80 Chrome/71.0.3578.80 Safari/537.36"
@@ -45,8 +45,8 @@ class Facebook:
             username = self.driver.find_element(By.ID,"email")
             password = self.driver.find_element(By.ID,"pass")
 
-            username.send_keys("boris_wtf@hotmail.com")
-            password.send_keys(PASS)
+            username.send_keys(FB_EMAIL)
+            password.send_keys(FB_PASS)
 
             self.driver.find_element(By.ID,"u_0_b").click()
             print("click")
