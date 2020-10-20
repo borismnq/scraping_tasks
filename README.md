@@ -8,5 +8,6 @@ Some scraping examples
 ``` python ig.py ```
 
 ## Run fb script
+
 *Update email and password variables* then:
 ``` python fb.py ```
